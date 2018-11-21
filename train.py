@@ -11,10 +11,7 @@ import warnings
 from datetime import datetime
 
 import numpy as np
-import matplotlib.pyplot as plt
 from tqdm import tqdm
-import pandas as pd
-import joblib
 
 from sklearn.model_selection import train_test_split
 from skimage.io import imread
@@ -62,7 +59,7 @@ def parse_args():
                         help='image file extension')
     parser.add_argument('--mask-ext', default='png',
                         help='mask file extension')
-    parser.add_argument('--aug', default=True, type=str2bool)
+    parser.add_argument('--aug', default=False, type=str2bool)
     parser.add_argument('--loss', default='BCEDiceLoss',
                         choices=loss_names,
                         help='loss: ' +
