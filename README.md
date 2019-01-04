@@ -2,11 +2,11 @@
 This repository contains code for a image segmentation model based on [UNet++: A Nested U-Net Architecture for Medical Image Segmentation](https://arxiv.org/abs/1807.10165) implemented in PyTorch.
 
 ## Requirements
-1. Python 3.6
-2. PyTorch 0.4
-3. scikit-learn 0.20
-4. scikit-image 0.14
-5. OpenCV 3
+- Python 3.6
+- PyTorch 0.4
+- scikit-learn 0.20
+- scikit-image 0.14
+- OpenCV 3
 
 ## Training on [2018 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2018) dataset
 1. Download dataset from [here](https://www.kaggle.com/c/data-science-bowl-2018/data) to input/
