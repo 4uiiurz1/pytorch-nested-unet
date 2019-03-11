@@ -1,4 +1,4 @@
-# A PyTorch implementation of UNet++ (Nested U-Net)
+# PyTorch implementation of UNet++ (Nested U-Net)
 This repository contains code for a image segmentation model based on [UNet++: A Nested U-Net Architecture for Medical Image Segmentation](https://arxiv.org/abs/1807.10165) implemented in PyTorch.
 
 ## Requirements
