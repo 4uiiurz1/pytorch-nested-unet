@@ -60,7 +60,9 @@ python test.py --name <dataset name>_NestedUNet_wDS
 
 ## Results
 ### DSB2018 (96x96)
+
 Here is the results on DSB2018 dataset (96x96) with LovaszHingeLoss.
+
 | Model                           |   IoU   |  Loss   |
 |:------------------------------- |:-------:|:-------:|
 | U-Net                           |  0.839  |  0.365  |
