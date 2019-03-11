@@ -8,7 +8,7 @@ from tqdm import tqdm
 import warnings
 
 def main():
-    img_size = 96
+    img_size = 256
 
     paths = glob('input/dsb2018/stage1_train/*')
 
