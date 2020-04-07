@@ -81,6 +81,7 @@ def main():
 
     avg_meter = AverageMeter()
 
+    os.makedirs('outputs/%s' % config['name'], exist_ok=True)
     with torch.no_grad():
         for input, target, meta in tqdm(val_loader, total=len(val_loader)):
             input = input.cuda()
@@ -98,7 +99,7 @@ def main():
             output = torch.sigmoid(output).cpu().numpy()
 
             for i in range(len(output)):
-                cv2.imwrite(os.path.join('outputs', config['name'], meta['img_id'][0] + '.jpg'),
+                cv2.imwrite(os.path.join('outputs', config['name'], meta['img_id'][i] + '.jpg'),
                             (output[i, 0] * 255).astype('uint8'))
 
     print('IoU: %.4f' % avg_meter.avg)
