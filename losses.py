@@ -1,17 +1,18 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import numpy as np
 
 try:
     from LovaszSoftmax.pytorch.lovasz_losses import lovasz_hinge
 except ImportError:
     pass
 
+__all__ = ['BCEDiceLoss', 'LovaszHingeLoss']
+
 
 class BCEDiceLoss(nn.Module):
     def __init__(self):
-        super(BCEDiceLoss, self).__init__()
+        super().__init__()
 
     def forward(self, input, target):
         bce = F.binary_cross_entropy_with_logits(input, target)
@@ -28,7 +29,7 @@ class BCEDiceLoss(nn.Module):
 
 class LovaszHingeLoss(nn.Module):
     def __init__(self):
-        super(LovaszHingeLoss, self).__init__()
+        super().__init__()
 
     def forward(self, input, target):
         input = input.squeeze(1)
