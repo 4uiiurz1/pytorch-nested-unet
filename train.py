@@ -79,7 +79,7 @@ def parse_args():
                         help='momentum')
     parser.add_argument('--weight_decay', default=1e-4, type=float,
                         help='weight decay')
-    parser.add_argument('--nesterov', default=True, type=str2bool,
+    parser.add_argument('--nesterov', default=False, type=str2bool,
                         help='nesterov')
 
     # scheduler
@@ -91,8 +91,8 @@ def parse_args():
     parser.add_argument('--patience', default=2, type=int)
     parser.add_argument('--milestones', default='1,2', type=str)
     parser.add_argument('--gamma', default=2/3, type=float)
-    parser.add_argument('--early_stopping', default=10, type=int,
-                        metavar='N', help='early stopping (default: 10)')
+    parser.add_argument('--early_stopping', default=-1, type=int,
+                        metavar='N', help='early stopping (default: -1)')
     
     parser.add_argument('--num_workers', default=4, type=int)
 
