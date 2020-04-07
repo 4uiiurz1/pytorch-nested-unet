@@ -1,4 +1,6 @@
 # PyTorch implementation of UNet++ (Nested U-Net)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 This repository contains code for a image segmentation model based on [UNet++: A Nested U-Net Architecture for Medical Image Segmentation](https://arxiv.org/abs/1807.10165) implemented in PyTorch.
 
 [**NEW**] Add support for multi-class segmentation dataset.
