@@ -102,7 +102,7 @@ def main():
             for i in range(len(output)):
                 for c in range(config['num_classes']):
                     cv2.imwrite(os.path.join('outputs', config['name'], str(c), meta['img_id'][i] + '.jpg'),
-                                (output[i, 0] * 255).astype('uint8'))
+                                (output[i, c] * 255).astype('uint8'))
 
     print('IoU: %.4f' % avg_meter.avg)
 
